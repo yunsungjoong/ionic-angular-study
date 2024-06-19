@@ -7,8 +7,8 @@ npm 10.2.4
 
 ### 시작하기 
 
-npm i 
-ionic serve
+nvm u 18 // 노드버전 18으로 없다면 설치 ( nvm install 18 )
+ionic s 시작하기 
 
 
 
@@ -23,4 +23,4 @@ ionic serve
 - Data는 제공   
 
 
-
+Untifications
