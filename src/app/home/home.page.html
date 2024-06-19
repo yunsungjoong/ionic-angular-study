@@ -17,7 +17,7 @@
   
   <ion-list>
     <ion-item *ngFor="let item of testDataArr; trackBy:trackItems">
-      <ion-button slot="end" shape="round" class="round-bar-top">검토요청</ion-button>
+      <ion-button slot="end" color="medium" shape="round" class="round-bar-top">검토요청</ion-button>
       <ion-label>
         <h2>[{{item.category}}] {{item.subject}}</h2> 
         <p>{{ item.date }}  
