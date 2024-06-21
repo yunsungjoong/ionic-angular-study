@@ -1,9 +1,9 @@
 ## Ionic angular itemList 
 
 ### 환경설정
-ionic (CLI) 7.2.0
-node 18.19.1 
-npm 10.2.4
+ionic (CLI) 5.4.16
+node 18.19.1 (npm 10.2.4)
+
 
 ### 시작하기 
 

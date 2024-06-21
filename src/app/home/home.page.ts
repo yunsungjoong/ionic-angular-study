@@ -21,7 +21,7 @@ export class HomePage {
           category:'대외공문',
           subject:'가나다9',
           date:'20240102T091000',
-          status:'승인요청'
+          status:'검토요청'
         },
       
         {
@@ -37,7 +37,7 @@ export class HomePage {
           category:'품의서',
           subject:'가나다7',
           date:'20240102T091900',
-          status:'승인요청'
+          status:'검토요청'
         },
       
         {
@@ -105,7 +105,7 @@ export class HomePage {
         },
 
         {     
-          id:0,
+          idx:0,
           category:'품의서0',
           subject:'가나다',
           date:'20240102T091900',
@@ -113,10 +113,33 @@ export class HomePage {
         },
       ]
     
-      trackItems(index: number, item: any) {
-        return item.idx;
-      }
+  ascendingOrder = true;
   
-  constructor() {}
+  constructor() {
+    this.sortData();
+  }
 
+  
+  toggleDirection() {
+    this.ascendingOrder = !this.ascendingOrder; // 방향 토글
+    this.sortData(); // 정렬함수 호출
+  }
+
+
+  // 정렬버튼 - 오름차순 , 내림차순 
+  sortData() {
+    if (this.ascendingOrder) {
+      this.testDataArr.sort((a,b) => a.idx - b.idx);  
+    } else {
+      this.testDataArr.sort((a,b) => b.idx - a.idx);
+    }
+
+  }
+
+  
+  refreshDefault() {
+    // 페이지 새로고침 
+    window.location.reload();
+
+  }
 }

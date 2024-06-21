@@ -1,12 +1,23 @@
 <ion-list >
     <ion-item>
-      <ion-button slot="end" color="medium" shape="round" class="round-bar-top">검토요청</ion-button>
+      <ion-card 
+        slot="end" 
+        [color]="getCardColor(item.status)" 
+        class="round-bar-top" 
+        (click)="changeStatus()"
+      >
+        <ion-card-subtitle>
+          {{item.status}}
+        </ion-card-subtitle>
+      </ion-card>
+      
       <ion-label >
         <h2>[{{item.category}}] {{item.subject}}</h2> 
         <p>{{ item.date }}  
-          <ion-button class="small-button">페이지 이동</ion-button>
+          <ion-button class="small-button" >페이지 이동</ion-button>
         </p>
       </ion-label>
-      
     </ion-item>
   </ion-list>
+
+  

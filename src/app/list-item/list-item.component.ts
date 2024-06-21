@@ -7,11 +7,19 @@ import { Component, Input } from '@angular/core';
 })
 export class ListItemComponent {
 
-  
-
   @Input() item: any;
-
-  
   
   constructor() { }
+  
+  getCardColor(status: string) : string {
+    return status === '승인요청' ? 'tertiary' : 'medium';
+  }
+
+  changeStatus() {
+    if (this.item.status === '승인요청') {
+      this.item.status = "검토요청";
+    } else {
+      this.item.status = '승인요청';
+    }
+  }
 }
