@@ -1,10 +1,10 @@
 <ion-list >
-    <ion-item>
+    <ion-item [ngStyle]="{'background-color': item.category === '품의서' ? 'green' : 'white'}">
       <ion-card 
         slot="end" 
         [color]="getCardColor(item.status)" 
         class="round-bar-top" 
-        (click)="changeStatus()"
+        (click)="changeStatus(item)"
       >
         <ion-card-subtitle>
           {{item.status}}
@@ -12,8 +12,8 @@
       </ion-card>
       
       <ion-label >
-        <h2>[{{item.category}}] {{item.subject}}</h2> 
-        <p>{{ item.date }}  
+        <h2 [ngStyle]="{'color': item.category === '품의서' ? 'white' : 'black'}">[{{item.category}}] {{item.subject}}</h2> 
+        <p [ngStyle]="{'color': item.category === '품의서' ? 'white' : 'black'}">{{ item.date }}  
           <ion-button class="small-button" >페이지 이동</ion-button>
         </p>
       </ion-label>

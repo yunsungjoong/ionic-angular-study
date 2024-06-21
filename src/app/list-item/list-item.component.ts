@@ -15,11 +15,9 @@ export class ListItemComponent {
     return status === '승인요청' ? 'tertiary' : 'medium';
   }
 
-  changeStatus() {
-    if (this.item.status === '승인요청') {
-      this.item.status = "검토요청";
-    } else {
-      this.item.status = '승인요청';
-    }
+  changeStatus(item:any) {
+    item.status = item.status === '승인요청' ? '검토요청' : '승인요청';
   }
+
 }
+

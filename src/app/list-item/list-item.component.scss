@@ -1,3 +1,4 @@
+// 페이지 이동버튼
 .small-button {
     --padding-start: 6px;
     --padding-end: 6px;
@@ -5,21 +6,48 @@
     font-size: 12px;
     color: white;
     font-weight: bold;
-  }
-  
-  .round-bar-top {
+}
+
+// 승인 & 검토 버튼
+.round-bar-top {
     position: absolute; 
     top: 0;
     right: 0;
     margin: 0;
     
-    margin-right: 2px; 
+    margin-right: 0px; 
     height: 26px;
     width: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: white; 
+}
+
+// List Item 
+ion-item {
+    padding: 0px;         // 아이템의 패딩
+    border-radius: 8px;    // 둥근 모서리 반경
+    margin: 0px;
+    margin-top: 3px;           // 아이템 간의 간격
+    margin-bottom: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // 그림자 추가로 입체감 부여
+    color: black;
+    --background: transparent; // 투명 배경
+    &::part(native) {
+      color: var(--color);
+      background-color: var(--background); // 배경색 설정
+    }
+
+    // 승인요청
+    ion-card {
+      font-size: 4px;
+      padding: 3px;       // 카드 내부의 패딩
+      border-radius: 8px; // 카드의 둥근 모서리 반경
+    }
     
-   
-  }
+    // 페이지 이동
+    ion-label {
+      border-radius: 8px; // 라벨의 둥근 모서리 반경
+    }
+}

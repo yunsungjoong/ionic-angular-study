@@ -90,24 +90,24 @@ export class HomePage {
       
         {
           idx:2,
-          category:'품의서2',
-          subject:'가나다',
+          category:'품의서',
+          subject:'가나다2',
           date:'20240102T091900',
           status:'승인요청'
         },
         
         {
           idx:1,
-          category:'품의서1',
-          subject:'가나다',
+          category:'품의서',
+          subject:'가나다1',
           date:'20240102T091900',
           status:'승인요청'
         },
 
         {     
           idx:0,
-          category:'품의서0',
-          subject:'가나다',
+          category:'품의서',
+          subject:'가나다0',
           date:'20240102T091900',
           status:'승인요청'
         },
