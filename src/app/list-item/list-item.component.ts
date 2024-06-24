@@ -9,15 +9,21 @@ export class ListItemComponent {
 
   @Input() item: any;
   
+  itemColors: {[key: number]: string} = {};
+
   constructor() { }
   
   getCardColor(status: string) : string {
     return status === '승인요청' ? 'tertiary' : 'medium';
   }
 
-  changeStatus(item:any) {
+  changeStatus(event: Event,item:any) {
+    event.stopPropagation();
     item.status = item.status === '승인요청' ? '검토요청' : '승인요청';
   }
 
+  toggleItemColor(itemId: number): void {
+    this.itemColors[itemId] = this.itemColors[itemId] === 'yellow' ? 'white' : 'yellow';
+  }
 }
 
