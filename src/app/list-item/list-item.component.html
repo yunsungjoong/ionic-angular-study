@@ -22,10 +22,11 @@
       </ion-label>
     </ion-item>
   </ng-container>
-
-    <!-- category 가 품의서가 아닌 경우 -->
+  
+  <!-- category 가 품의서가 아닌 경우 -->
     <ng-template #defaultItem>
       <ion-item [ngStyle]="{'background-color': itemColors[item.id] || 'white'}" (click)="toggleItemColor(item.id, 'white')">
+        <!-- 승인요청,검토요청 클릭 이벤트 -->
         <ion-card 
           slot="end" 
           [color]="getCardColor(item.status)" 
