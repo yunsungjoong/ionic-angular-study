@@ -22,8 +22,8 @@ export class ListItemComponent {
     item.status = item.status === '승인요청' ? '검토요청' : '승인요청';
   }
 
-  toggleItemColor(itemId: number): void {
-    this.itemColors[itemId] = this.itemColors[itemId] === 'yellow' ? 'white' : 'yellow';
+  toggleItemColor(itemId: number, defaultColor : string) : void {
+    this.itemColors[itemId] = this.itemColors[itemId] === 'yellow' ? defaultColor : 'yellow';
   }
 }
 
