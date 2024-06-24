@@ -1,5 +1,7 @@
 <ion-list >
-    <ion-item [ngStyle]="{'background-color': item.category === '품의서' ? 'green' : 'white'}">
+  
+    <!-- <ion-item [ngStyle]="{'background-color': item.category === '품의서' ? 'green' : 'white'}"> -->
+    <ion-item *ngIf="item.category === '품의서'; else defaultItem" style="background-color: green ;">
       <ion-card 
         slot="end" 
         [color]="getCardColor(item.status)" 
@@ -18,6 +20,27 @@
         </p>
       </ion-label>
     </ion-item>
+    <ng-template #defaultItem>
+      <ion-item style="background-color: white;">
+        <ion-card 
+          slot="end" 
+          [color]="getCardColor(item.status)" 
+          class="round-bar-top" 
+          (click)="changeStatus(item)"
+        >
+          <ion-card-subtitle>
+            {{item.status}}
+          </ion-card-subtitle>
+        </ion-card>
+        
+        <ion-label>
+          <h2 style="color: black;">[{{item.category}}] {{item.subject}}</h2> 
+          <p style="color: black;">{{ item.date }}  
+            <ion-button class="small-button">페이지 이동</ion-button>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ng-template>
   </ion-list>
 
   
