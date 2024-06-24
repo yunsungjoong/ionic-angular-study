@@ -25,5 +25,10 @@ export class ListItemComponent {
   toggleItemColor(itemId: number, defaultColor : string) : void {
     this.itemColors[itemId] = this.itemColors[itemId] === 'yellow' ? defaultColor : 'yellow';
   }
+
+  navigateToDetail(event: Event,item: any): void {
+    event.stopPropagation();
+
+  }
 }
 
