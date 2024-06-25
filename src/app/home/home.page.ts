@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -115,7 +116,7 @@ export class HomePage {
     
   ascendingOrder = true;
   
-  constructor() {
+  constructor(private router: Router) {
     this.sortData();
   }
 
@@ -141,5 +142,9 @@ export class HomePage {
     // 페이지 새로고침 
     window.location.reload();
 
+  }
+  navigateToDetail(event: Event, itemId: number): void {
+    event.stopPropagation();
+    this.router.navigate(['/item-detail', itemId]); // 라우터에 데이터 전달 (id만 전달)
   }
 }

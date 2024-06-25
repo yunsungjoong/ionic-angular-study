@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-item',
@@ -11,7 +12,7 @@ export class ListItemComponent {
   
   itemColors: {[key: number]: string} = {};
 
-  constructor() { }
+  constructor(private router: Router) { }
   
   getCardColor(status: string) : string {
     return status === '승인요청' ? 'tertiary' : 'medium';
@@ -26,9 +27,9 @@ export class ListItemComponent {
     this.itemColors[itemId] = this.itemColors[itemId] === 'yellow' ? defaultColor : 'yellow';
   }
 
-  navigateToDetail(event: Event,item: any): void {
+  navigateToDetail(event: Event): void {
     event.stopPropagation();
-
+    this.router.navigate(['/item-detail', this.item.idx]); // 라우터에 데이터 전달 (id만 전달)
   }
 }
 

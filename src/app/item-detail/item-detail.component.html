@@ -1,3 +1,29 @@
-<p>
-  item-detail works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        Back
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Item Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="item">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>[{{ item.category }}] {{ item.subject }}</ion-card-title>
+        
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>ID:</strong> {{ item.idx }}</p>
+        <p><strong>Category:</strong> {{ item.category }}</p>
+        <p><strong>Subject:</strong> {{ item.subject }}</p>
+        <p><strong>Date:</strong> {{ item.date }}</p>
+        <p><strong>Status:</strong> {{ item.status }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
