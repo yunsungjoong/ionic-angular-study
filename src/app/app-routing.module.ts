@@ -8,7 +8,7 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'item-detail/:id', // item-detail 경로 추가
+    path: 'item-detail', // item-detail 경로 추가
     component: ItemDetailComponent
   },
   {

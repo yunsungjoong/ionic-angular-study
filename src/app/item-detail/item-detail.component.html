@@ -21,9 +21,26 @@
         <p><strong>ID:</strong> {{ item.idx }}</p>
         <p><strong>Category:</strong> {{ item.category }}</p>
         <p><strong>Subject:</strong> {{ item.subject }}</p>
-        <p><strong>Date:</strong> {{ item.date }}</p>
+        <p><strong>Date:</strong> 
+      
+          <ion-button fill="clear" (click)="openDatePicker()">
+            {{ item.date | date: 'yyyy-MM-dd' }}
+          </ion-button>
+        </p>
         <p><strong>Status:</strong> {{ item.status }}</p>
       </ion-card-content>
     </ion-card>
   </div>
+
+  <ion-modal [isOpen]="isDatePickerOpen">
+    <ion-datetime
+      [value]="item.date"
+      (ionChange)="onDateSelected($event)"
+      presentation="date"
+    >
+    </ion-datetime>
+    <ion-button (click)="closeDatePicker">닫기</ion-button>
+  </ion-modal>
+
+  
 </ion-content>

@@ -53,7 +53,7 @@ export class HomePage {
           idx:5,
           category:'품의서',
           subject:'가나다5',
-          date:'20240102T091900',
+          date:'20240105T091900',
           status:'승인요청'
         },
       
@@ -61,7 +61,7 @@ export class HomePage {
           idx:11,
           category:'품의서',
           subject:'가나다11',
-          date:'20240102T091900',
+          date:'20240105T091900',
           status:'승인요청'
         },
       
@@ -69,7 +69,7 @@ export class HomePage {
           idx:12,
           category:'대외공문',
           subject:'가나다12',
-          date:'20240102T091900',
+          date:'20240108T091900',
           status:'승인요청'
         },
       
@@ -85,7 +85,7 @@ export class HomePage {
           idx:4,
           category:'대외공문',
           subject:'가나다4',
-          date:'20240102T091900',
+          date:'20240109T091900',
           status:'승인요청'
         },
       
@@ -93,7 +93,7 @@ export class HomePage {
           idx:2,
           category:'품의서',
           subject:'가나다2',
-          date:'20240102T091900',
+          date:'20240104T091900',
           status:'승인요청'
         },
         
@@ -109,7 +109,7 @@ export class HomePage {
           idx:0,
           category:'품의서',
           subject:'가나다0',
-          date:'20240102T091900',
+          date:'20240103T091900',
           status:'승인요청'
         },
       ]
