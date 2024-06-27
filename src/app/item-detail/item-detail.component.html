@@ -24,7 +24,7 @@
         <p><strong>Date:</strong> 
       
           <ion-button fill="clear" (click)="openDatePicker()">
-            {{ item.date | date: 'yyyy-MM-dd' }}
+            {{ item.date | date: 'yyyy-MM-ddTHH:mm:ss' }}
           </ion-button>
         </p>
         <p><strong>Status:</strong> {{ item.status }}</p>
@@ -32,14 +32,23 @@
     </ion-card>
   </div>
 
-  <ion-modal [isOpen]="isDatePickerOpen">
-    <ion-datetime
-      [value]="item.date"
-      (ionChange)="onDateSelected($event)"
-      presentation="date"
-    >
-    </ion-datetime>
-    <ion-button (click)="closeDatePicker">닫기</ion-button>
+  <ion-modal [isOpen]="isDatePickerOpen"(ionModalDidDismiss)="closeDatePicker()">
+    <ng-template>
+        <ion-datetime
+          [value]="tempDate"
+          (ionChange)="onTempDateSelected($event)"
+          presentation="date-time" 
+        >
+        </ion-datetime>
+        <ion-footer>
+          <ion-toolbar>
+            <div style="display: flex; flex-direction: column; width: 100%;">
+              <ion-button expand="block" (click)="confirmDatePicker()">확인</ion-button>
+              <ion-button expand="block" (click)="closeDatePicker()">닫기</ion-button>
+            </div>
+          </ion-toolbar>
+        </ion-footer>
+    </ng-template>
   </ion-modal>
 
   

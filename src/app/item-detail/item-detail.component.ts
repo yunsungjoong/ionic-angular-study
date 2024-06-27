@@ -9,7 +9,8 @@ import { Location } from '@angular/common';
 })
 export class ItemDetailComponent {
   item: any;
-  isDatePickerOpen = false
+  isDatePickerOpen = false;
+  tempDate: string = '';
 
   constructor(
     private location: Location,
@@ -19,6 +20,7 @@ export class ItemDetailComponent {
     if (navigation?.extras?.state) {
       console.log('Received item:', navigation.extras.state['item']); // 데이터 수신 로그 추가
       this.item = navigation.extras.state['item'];
+      this.tempDate = this.item.date
     } else {
       console.log('No navigation extras found'); // 데이터가 없는 경우 로그
     }
@@ -27,14 +29,8 @@ export class ItemDetailComponent {
   goBack(): void {
     this.location.back();
   }
-
-  toggleStatus(): void {
-    if (this.item) {
-      this.item.status = this.item.status === '승인요청' ? '검토요청' : '승인요청';
-    }
-  }
-  
   openDatePicker(): void {
+    this.tempDate = this.item.date;
     this.isDatePickerOpen = true;
   }
 
@@ -42,10 +38,12 @@ export class ItemDetailComponent {
     this.isDatePickerOpen = false;
   }
 
-  onDateSelected(event: any): void {
-    this.item.date = event.detail.value;
-    this.closeDatePicker(); // 선택 후 모달 닫기
+  confirmDatePicker(): void {
+    this.item.date = this.tempDate;
+    this.closeDatePicker();
   }
 
-  
+  onTempDateSelected(event:any): void {
+    this.tempDate = event.detail.value;
+  }
 }
