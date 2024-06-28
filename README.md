@@ -35,8 +35,7 @@ ionic s
 - UI는 깔끔하게 
 - Data는 제공   
 
-
-Data는 
+### Data
 
 ```javascript
 testDataArr = [
