@@ -11,17 +11,21 @@
 - Angular CLI: 18.0.4
 - node 18.20.3 ( Package Manager : npm 10.7.0 )
 
+
 ### 시작하기 
-- nvm use 18 // nvm 으로 node 버전 변경
+
+- nvm use 18 
 - ionic s
 
 ```
-nvm u 18 // 노드버전 18으로 없다면 설치 ( nvm install 18 )
+// 노드버전 18으로 없다면 설치 ( nvm install 18 )
+nvm use 18  // 버전 수정 후  
+
+// 프로젝트 시작하기 
+ionic s
 ```
 
-```
-ionic s 시작하기 
-```
+---
 
 ## Angular & Ionic 프로젝트 과제
 
