@@ -3,7 +3,7 @@
 
 <b>간단한 리스트 클릭시 상세로 이동하는 앱 입니다.</b>
 
-![Ionic-App_](https://github.com/yunsungjoong/ionic-angular-study/assets/96567925/07956272-5abb-4714-a5bf-3fff5aa23eb7)
+![Ionic-App_](https://github.com/user-attachments/assets/666f862b-ba18-49a7-a122-6224f2e85bba)
 
 
 ### 개발환경
