@@ -12,15 +12,19 @@
 - node 18.20.3 ( Package Manager : npm 10.7.0 )
 
 
-### 시작하기 
+### 세팅 & 시작
 
-- nvm use 18 
+
+- nvm use 18   
 - npm i
 - ionic s
 
 ```
-// 노드버전 18으로 없다면 설치 ( nvm install 18 )
+// nvm 으로 노드버전 변경 ( nvm install 18 )
 nvm use 18  // 버전 수정 후  
+
+// 노드 설치
+node i 
 
 // 프로젝트 시작하기 
 ionic s
