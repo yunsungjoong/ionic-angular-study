@@ -15,6 +15,7 @@
 ### 시작하기 
 
 - nvm use 18 
+- npm i
 - ionic s
 
 ```
