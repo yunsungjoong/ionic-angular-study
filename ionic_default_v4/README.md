@@ -1,144 +1,75 @@
-# 신규 프로젝트 Setting Guide
-수정할 파일 
-- **config.xml**
-- **app-environ.ts**
+## Ionic Cordova Android App 
+---
 
-## config.xml
-아래 순서대로 개발할 앱으로 명칭 변경 필요
+### 결과물 
 
-<docgen-index>
+<img width="346" alt="image" src="https://github.com/user-attachments/assets/d98bff7a-ee1b-46a2-a2b1-7f337aa445d3">
 
-1. [`widget id`](#id)
+Ionic Cordova 를 사용해 <br>
+개발하여 Android Studio 에서 핸드폰에서 앱 화면을 보여주는 작업 했습니다.<br>
+아래 요청사항을 적용하여 핸드폰에서 앱실행 화면을 보여주시면 됩니다.<br>
 
-2. [`widget ios-CFBundleVersion`](#ios-cfbundleversion)
+--- 
 
-3. [`widget version`](#version)
+### 개발환경 
+- `node 버전 v10.24.1`
+- `ionic 버전 v5.4.16`
+- `cordova 버전 v10.0.0`
+- `안드로이드 스튜디오 버전 v3.6.3`
 
-4. [`name`](#name)
+--- 
 
-5. [`description`](#description)
+### 세팅 & 시작
 
-6. [`StatusBarBackgroundColor`](#statusbarbackgroundcolor)
+```
+// nvm 으로 노드버전 변경
+- nvm use 10 
 
-7. [`AndroidManifest CompanyCode Setting`](#androidmanifest)
+// 노드 설치
+- npm i
 
-8. [`CFBundleURLTypes`](#cfbundleurltypes)
-</docgen-index>
-
-<docgen-api>
-
-### id
-앱의 패키지명을 입력
-```typescript
-<widget ... id="개발할 앱의 패키지명" ...>
-
-// ex)
-<widget ... id="com.skt.pe.meetingreservation" ...>
+// 프로젝트 시작
+- ionic s
 ```
 
-### ios-CFBundleVersion
-IOS 앱 버전 입력
-```typescript
-<widget ... ios-CFBundleVersion="1.0.0">
-```
+---
 
-### version
-안드로이드 앱 버전 입력
-```typescript
-<widget ... version="1.0.0">
-```
+## Ionic Cordova Android 프로젝트 과제  
 
-### name
-앱 이름 입력
-```typescript
-<widget . . . ">
-  <name>개발할 앱이름 작성</name>
-</widget>
+### ionic Cordova 사용해 안드로이드 앱 만들기 
+[요청사항]
+1. 첨부파일 'ionic_default_v4.zip'을 이용하여 안드로이드 소스 생성 ( 완료 ) 
 
-// ex)
-<widget . . . ">
-  <name>T net 피드</name>
-</widget>
-```
+2. 버전 제원 ( 완료 )
+- 안드로이드 스튜디오 버전 v3.6.3
+- cordova 버전 v10.0.0 
+- node 버전 v10.24.1 
+- ionic 버전 v5.4.16 
 
-### description
-앱 설명 입력
-```typescript
-<widget . . . ">
-  <description>개발할 앱설명 작성</description>
-</widget>
+3. 안드로이드 스튜디오에서 앱 실행 방법 정리 ionic ( 완료 )
+- 검색하여 앱을 핸드폰에서 실행하는 방법 확인 및 연구
 
-// ex)
-<widget . . . ">
-  <description>SKT T net 피드</description>
-</widget>
-```
+4. 안드로이드 스튜디오에서 앱 설치 파일(.apk) 생성 방법 정리 및 확인 ( 완료 ) 
+- 첨부파일 'debug.keystore'를 이용해서 앱 설치 파일 만들 것
 
-### StatusBarBackgroundColor
-StatusBar 색상 설정
-```typescript
-<preference name="StatusBarBackgroundColor" value="#6e78ff" />
-```
+5. 앱이름 변경 ( 완료 ) 
+- '과제완수'로 앱이름을 변경
 
-### AndroidManifest
-개발할 앱의 관계사로 변경 필요
-```typescript
-<edit-config file="AndroidManifest.xml" mode="insert" target="/manifest/application/activity/intent-filter">
-    <category android:name="android.intent.category.앱의 관계사 입력" />
-    <category android:name="android.intent.category.SKSUBGROUP" />
-</edit-config>
+6. 패키지명 변경 ( 완료 ) 
+- 'com.sk.pe.toktok.todo' 패키지명을 적용
 
-// ex)
-<edit-config file="AndroidManifest.xml" mode="insert" target="/manifest/application/activity/intent-filter">
-    <category android:name="android.intent.category.SKT" />
-    <category android:name="android.intent.category.SKSUBGROUP" />
-</edit-config>
-```
+7. version 변경 ( 완료 ) 
+- '1.0.5' 버전을 적용 할것
 
-### CFBundleURLTypes
-개발할 IOS 패키지명 및 앱ID 입력
-```typescript
-<widget . . . ">
-  . . .
-    <config-file parent="CFBundleURLTypes" target="*-Info.plist">
-    <array>
-        <dict>
-            <key>CFBundleTypeRole</key>
-            <string>Editor</string>
-            <key>CFBundleURLName</key>
-            <string>com.skt.pe.meetingreservation</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>I000ST0083</string>
-            </array>
-        </dict>
-    </array>
-    </config-file>
-  . . .
-</widget>
-```
+8. 전화 및 문자 연동되도록 개선
+- 번호 입력시 전화앱 연동 되도록 개선
+- 번호 입력시 문자앱 연동 되도록 개선
+- ex. 번호(01025805721) 입력 후 특정 버튼을 누르면 전화 | 문자앱 연동되도록 개발
 
-</docgen-api>
+9.  스플래쉬(런치) 이미지 추가 ( 완료 ) 
+- 첨부파일 'splash.png'이미지로 스플래쉬(런치) 노출
 
-## AppEnviron.ts
-src/app/modules/app-environ.ts
+10.  앱 icon 적용 ( 완료 ) 
+- 첨부파일 'icon.png'이미지로 앱아이콘 적용
 
-<docgen-index>
-
-1. [`App ID Setting`](#appid)
-
-</docgen-index>
-
-<docgen-api>
-
-### AppID
-개발 할 앱 ID로 셋팅 필요
-
-```typescript
-private androidPhoneAppID: string   = "Z0000PE026";
-private androidTabletAppID: string  = "Z0000PE026";
-private iPhoneAppID: string         = "I000ST0083";
-private iPadAppID: string           = "I000ST0083";
-```
-
-</docgen-api>
+11. StatusBar 색상 변경 (변경할 색상: #7D76D3)
