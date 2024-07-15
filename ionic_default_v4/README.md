@@ -5,7 +5,8 @@
 
 <img width="346" alt="image" src="https://github.com/user-attachments/assets/d98bff7a-ee1b-46a2-a2b1-7f337aa445d3">
 
-Ionic Cordova 를 사용해 <br>
+<br>
+`Ionic Cordova` 으로 <br>
 개발하여 Android Studio 에서 핸드폰에서 앱 화면을 보여주는 작업 했습니다.<br>
 아래 요청사항을 적용하여 핸드폰에서 앱실행 화면을 보여주시면 됩니다.<br>
 
