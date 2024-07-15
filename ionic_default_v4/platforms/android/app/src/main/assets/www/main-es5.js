@@ -624,7 +624,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! /Users/yunsungjoong/Desktop/yun/Damoa/Q/ionic_default_v4/src/main.ts */
+      /*! /Users/yunsungjoong/Desktop/yun/ionic-angular-study/ionic_default_v4/src/main.ts */
       "./src/main.ts");
       /***/
     }
