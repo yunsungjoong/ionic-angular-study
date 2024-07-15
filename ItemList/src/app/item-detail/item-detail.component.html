@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        Back
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Item Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="item">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>[{{ item.category }}] {{ item.subject }}</ion-card-title>
+        
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>ID:</strong> {{ item.idx }}</p>
+        <p><strong>Category:</strong> {{ item.category }}</p>
+        <p><strong>Subject:</strong> {{ item.subject }}</p>
+        <p><strong>Date:</strong> 
+      
+          <ion-button fill="clear" (click)="openDatePicker()">
+            {{ item.date | date: 'yyyy-MM-ddTHH:mm:ss' }}
+          </ion-button>
+        </p>
+        <p><strong>Status:</strong> {{ item.status }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-modal [isOpen]="isDatePickerOpen"(ionModalDidDismiss)="closeDatePicker()">
+    <ng-template>
+        <ion-datetime
+          [value]="tempDate"
+          (ionChange)="onTempDateSelected($event)"
+          presentation="date-time" 
+        >
+        </ion-datetime>
+        <ion-footer>
+          <ion-toolbar>
+            <div style="display: flex; flex-direction: column; width: 100%;">
+              <ion-button expand="block" (click)="confirmDatePicker()">확인</ion-button>
+              <ion-button expand="block" (click)="closeDatePicker()">닫기</ion-button>
+            </div>
+          </ion-toolbar>
+        </ion-footer>
+    </ng-template>
+  </ion-modal>
+
+  
+</ion-content>
