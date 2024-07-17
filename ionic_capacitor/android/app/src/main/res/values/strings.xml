@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">ionic_capacitor</string>
-    <string name="title_activity_main">ionic_capacitor</string>
+    <string name="app_name">과제완수</string>
+    <string name="title_activity_main">과제완수</string>
     <string name="package_name">com.sk.pe.toktok.todo</string>
     <string name="custom_url_scheme">com.sk.pe.toktok.todo</string>
 </resources>

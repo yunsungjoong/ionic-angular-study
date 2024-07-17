@@ -4,7 +4,9 @@ const config: CapacitorConfig = {
   appId: 'com.sk.pe.toktok.todo',
   appName: '과제완수',
   webDir: 'www',
-  bundledWebRuntime: false
+  bundledWebRuntime: false,
+  
+
 };
 
 export default config;
