@@ -28,6 +28,7 @@
     "@capacitor/device": "^4.1.0",
     "@capacitor/ios": "^4.7.1",
     "@capacitor/splash-screen": "^4.2.0",
+    "@capacitor/status-bar": "^6.0.0",
     "@ionic/angular": "^7.0.1",
     "ionicons": "^7.0.0",
     "rxjs": "~7.5.0",

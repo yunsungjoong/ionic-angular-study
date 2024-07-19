@@ -5,7 +5,12 @@ const config: CapacitorConfig = {
   appName: '과제완수',
   webDir: 'www',
   bundledWebRuntime: false,
-  
+  plugins: {
+    StatusBar: {
+      style: 'DARK', // 상태 표시줄 스타일 설정
+      backgroundColor: '#7D76D3', // 상태 표시줄 배경색 설정
+    },
+  },
 
 };
 

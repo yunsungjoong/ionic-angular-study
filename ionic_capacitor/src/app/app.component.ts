@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Platform, ToastController } from '@ionic/angular';
 import { App as CapacitorApp } from '@capacitor/app';
+import { StatusBar, Style } from '@capacitor/status-bar';
+
 
 @Component({
   selector: 'app-root',
@@ -9,7 +11,7 @@ import { App as CapacitorApp } from '@capacitor/app';
 })
 export class AppComponent {
   private lastBackPressTime: number = 0;
-  private timePeriodToExit: number = 2000; // 2 seconds
+  private timePeriodToExit: number = 2000;
 
   constructor(
     private platform: Platform,
@@ -21,6 +23,7 @@ export class AppComponent {
   initializeApp() {
     this.platform.ready().then(() => {
       if (this.platform.is('android')) {
+        this.setStatusBar();
         CapacitorApp.addListener('backButton', ({ canGoBack }) => {
           if (canGoBack) {
             window.history.back();
@@ -32,6 +35,11 @@ export class AppComponent {
     });
   }
 
+  async setStatusBar() {
+    await StatusBar.setStyle({ style: Style.Dark});
+    await StatusBar.setBackgroundColor({ color: '#7D76D3' });
+    await StatusBar.setOverlaysWebView({ overlay: true });
+  }
   async handleBackButton() {
     const currentTime = new Date().getTime();
     if (currentTime - this.lastBackPressTime < this.timePeriodToExit) {
@@ -46,4 +54,6 @@ export class AppComponent {
       await toast.present();
     }
   }
+
+
 }
