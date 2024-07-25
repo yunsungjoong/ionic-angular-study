@@ -41,7 +41,6 @@ export class AppComponent {
     await StatusBar.setStyle({ style: Style.Dark}); // 스타일 설정
     await StatusBar.setBackgroundColor({ color: '#7D76D3' }); // 배경색 설정
     await StatusBar.setOverlaysWebView({ overlay: false }); // 웹뷰 덮지 않도록 false
-    
   }
   
   async handleBackButton() {
