@@ -6,10 +6,7 @@ const config: CapacitorConfig = {
   webDir: 'www',
   bundledWebRuntime: false,
   plugins: {
-    StatusBar: {
-      style: 'DARK', // 상태 표시줄 스타일 설정
-      backgroundColor: '#7d76d3', // 상태 표시줄 배경색 설정
-    },
+    
   },
 
 };
