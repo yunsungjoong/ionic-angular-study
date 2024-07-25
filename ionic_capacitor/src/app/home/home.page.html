@@ -1,16 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Phone & SMS
+      전화 & 문자
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-item>
-    <ion-label position="floating">번호 입력해주세요</ion-label>
-    <ion-input></ion-input>
+    <ion-label position="floating">전화번호를 입력해주세요</ion-label>
+    <ion-input type="tel" [(ngModel)]="phoneNumber"></ion-input>
   </ion-item>
-  <ion-button>전화</ion-button>
-  <ion-button>문자</ion-button>
+  <div class="button-container">
+    <ion-button name="call-outline" (click)="makeCall()" class="half-button">전화</ion-button>
+    <ion-button name="chatbox-outline" (click)="sendSMS()" class="half-button">문자</ion-button>
+  </div>
 </ion-content>
