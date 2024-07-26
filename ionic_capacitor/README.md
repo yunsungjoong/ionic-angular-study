@@ -2,10 +2,9 @@
 
 ### 결과물 
 
-<img src="https://github.com/user-attachments/assets/3c0ed5f8-61fb-43ad-af6a-bacee4444c27" width="600" height="1200" alt="ionic capacitor">
-
-![ionic_capacitor](https://github.com/user-attachments/assets/3c0ed5f8-61fb-43ad-af6a-bacee4444c27)
-
+<div align="center">
+<img src="https://github.com/user-attachments/assets/3c0ed5f8-61fb-43ad-af6a-bacee4444c27" width="500" height="1000" alt="ionic capacitor">
+</div>
 <br>
 
 `Ionic Capasitor`로 개발하여 `Android Studio`에서 핸드폰에서 앱 화면을 보여주는 작업
