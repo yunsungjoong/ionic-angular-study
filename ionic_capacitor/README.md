@@ -2,6 +2,8 @@
 
 ### 결과물 
 
+<img src="https://github.com/user-attachments/assets/3c0ed5f8-61fb-43ad-af6a-bacee4444c27" width="300" height="200" alt="ionic capacitor">
+
 ![ionic_capacitor](https://github.com/user-attachments/assets/3c0ed5f8-61fb-43ad-af6a-bacee4444c27)
 
 <br>
