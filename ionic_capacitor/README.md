@@ -1,5 +1,5 @@
-## Ionic Capasitor Android App 
-
+# Ionic Capasitor Android App 
+<br>
 ## 결과물 
 <br>
 <div align="center">
@@ -7,7 +7,7 @@
 </div>
 <br>
 
-`Ionic Capasitor`로 개발하여 `Android Studio`에서 핸드폰에서 앱 화면을 보여주는 작업<br>
+`Ionic Capasitor`로 개발하여 `Android Studio`에서 핸드폰에서 앱 화면을 보여주는 작업으로<br>
 아래 요청사항을 적용하여 핸드폰에서 앱실행 화면을 보여줍니다.
 
 <br>
